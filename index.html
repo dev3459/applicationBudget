@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Application Budget</title>
+</head>
+<body>
+    <div id="container">
+        <div id="right-content">
+            <div id="recette">
+                <!-- Le montant de tout les crédits -->
+                <p>Total des crédits : </p><span id="montantCredit">0</span><span> €</span>
+            </div>
+            <div id="depense">
+                <!-- Le montant de toutes les dépenses -->
+                <p>Total des débits : </p><span id="montantDebit">0</span><span> €</span>
+
+            </div>
+            <div id="restant-compte">
+                <!-- Le montant restant dans votre compte -->
+                <p>Sur votre compte il vous reste : </p><span id="montantCompte">0</span><span> €</span>
+            </div>
+            <div id="init-compte">
+                <label for="compteDepart">Solde de votre banque</label>
+                <div id="inputBase">
+                    <input type="text" id="compteDepart" placeholder="Ex : 1000"><span> €</span>
+                </div>
+                <button id="btnCompteDepart">Créer votre montant</button>
+            </div>
+        </div>
+        <div id="left-content">
+            <div id="top">
+                <div>
+                    <label for="name">Nom</label>
+                    <div>
+                        <input type="text" id="name" placeholder="Ex : Assurance véhicule">
+                    </div>
+                </div>
+                <div>
+                    <label for="credit">Crédit</label>
+                    <div>
+                        <input type="text" id="credit" placeholder="Ex : 0"><span class="euros"> €</span>
+                    </div>
+                </div>
+                <div>
+                    <label for="debit">Débit</label>
+                    <div>
+                        <input type="text" id="debit" placeholder="Ex : 150"><span class="euros"> €</span>
+                    </div>
+                </div>
+
+                <button id="add">Ajouter</button>
+            </div>
+            <div id="bottom">
+                <!-- Liste des éléments -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nom</th>
+                            <th>Crédit</th>
+                            <th>Débit</th>
+                        </tr>
+                    </head>
+                    <tbody id="table"></tbody>
+                </table>
+            </div>
+        </div>        
+    </div>
+    
+    <script src="js/app.js"></script>
+    <script src="js/btn.js"></script>
+    <script src="js/calcul.js"></script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    
+html{
+    font-size: 62.5%;
+}
+    
+body{
+    width: 100%;
+    height: 100vh;
+    font-size: 2rem;
+}
+
+#container{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(0, 119, 255,0.5) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+    background-blend-mode: multiply,multiply;
+    display: flex;
+}
+
+#left-content{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#top{
+    display: flex;
+    margin-top: 1rem;
+    padding-bottom: 10px;
+    border-bottom: 2px dashed darkcyan;
+}
+
+#top label{
+    color: white;
+}
+
+#top input{
+    margin-top: 1rem;
+    padding: 5px;
+    width: 80%;
+}
+
+#name{
+    margin-right: 1rem;
+    width: 15rem !important;
+}
+
+#top span{
+    color: white;
+}
+
+#add{
+    width: 120px;
+    height: 50px;
+    margin-top: 2rem;
+    background-color: darkcyan;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+#add:hover{
+    box-shadow: 0 0 10px 2px black inset;
+    cursor: pointer;
+}
+
+.euros{
+    margin-right: 1rem;
+}
+
+#bottom{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+table{
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+    border-collapse: separate;
+    border: 1px solid blue;
+}
+
+thead{
+    color: turquoise;
+    background-color: black;
+}
+
+tbody{
+    color: white;
+}
+
+td{
+    border: 1px solid blue;
+}
+
+#right-content{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgba(0, 85, 196, 0.829);
+    box-shadow: 0 0 6px 4px darkblue;
+    color: white;
+    font-family: cursive;
+}
+
+#right-content #recette,
+#right-content #depense,
+#right-content #restant-compte{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    display: flex;
+}
+
+#montantCredit,
+#montantDebit,
+#montantCompte{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#restant-compte{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+}
+
+#init-compte{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#init-compte label{
+    display: block;
+    text-align: center;
+}
+
+#init-compte #inputBase input{
+    padding: 5px;
+    font-family: cursive;
+}
+
+#init-compte #btnCompteDepart{
+    width: 15rem;
+    height: 5rem;
+    background-color: darkgoldenrod;
+    color: white;
+    text-transform: uppercase;
+    padding: 5px;
+    font-family: cursive;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#init-compte #btnCompteDepart:hover{
+    border: 2px solid blue;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+#init-compte #btnCompteDepart:active{
+    background-color: red;
+}
+
+#errorMessage{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 10px;
+    background-color: black;
+    padding: 5px;
+    text-align: center;
+    animation: error 1s infinite;
+}
+
+@keyframes error{
+    0%{
+        color: red;
+    }
+    50%{
+        color: yellow;
+    }
+    100%{
+        color: red;
+    }
+}
+
+@media screen and (max-width: 850px){
+    #container{
+        display: inline-block;
+    }
+
+    #left-content{
+        background: linear-gradient(to bottom, rgba(0, 119, 255,0.5) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+        background-blend-mode: multiply,multiply;
+        width: 100%;
+        height: 100%;
+        border-top: 2px solid blue;
+    }
+
+    #top span{
+        display: none;
+    }
+
+    #right-content{
+        width: 100%;
+    }
+}
