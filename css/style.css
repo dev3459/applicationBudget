@@ -49,7 +49,6 @@ body{
 
 #name{
     margin-right: 1rem;
-    width: 15rem !important;
 }
 
 #top span{
@@ -203,16 +202,30 @@ td{
 }
 
 @media screen and (max-width: 850px){
+    body{
+        background: linear-gradient(to bottom, rgba(0, 119, 255,0.5) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+        background-blend-mode: multiply,multiply;
+        height: 0;
+    }
+
     #container{
         display: inline-block;
     }
 
     #left-content{
-        background: linear-gradient(to bottom, rgba(0, 119, 255,0.5) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
-        background-blend-mode: multiply,multiply;
+        background-image: none;
         width: 100%;
-        height: 100%;
+        height: 80%;
         border-top: 2px solid blue;
+    }
+
+    #left-content {
+        display: block;
+    }
+
+    #top{
+        display: block;
+        text-align: center;
     }
 
     #top span{
@@ -221,5 +234,9 @@ td{
 
     #right-content{
         width: 100%;
+    }
+
+    #container{
+        background-image: none;
     }
 }
